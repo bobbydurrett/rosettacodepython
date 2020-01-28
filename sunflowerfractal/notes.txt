@@ -1,0 +1,7 @@
+http://rosettacode.org/wiki/Sunflower_fractal
+
+Seems pretty simple.
+
+Maybe follow C example and use Turtle?
+
+Is it just circles?
