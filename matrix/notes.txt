@@ -1,0 +1,9 @@
+http://rosettacode.org/wiki/Matrix_Digital_Rain
+
+It looks like these are mostly done with Curses implementations.
+
+https://docs.python.org/3/howto/curses.html
+
+Looks like it might run on Linux but not Windows but
+it mentions Windows library.
+
