@@ -7,3 +7,11 @@ https://docs.python.org/3/howto/curses.html
 Looks like it might run on Linux but not Windows but
 it mentions Windows library.
 
+https://docs.python.org/3/library/curses.html#module-curses
+
+reference documentation
+
+http://rosettacode.org/wiki/Matrix_Digital_Rain#NCURSES_version
+
+might be a good example C with ncurses.
+
