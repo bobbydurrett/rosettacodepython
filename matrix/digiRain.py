@@ -10,10 +10,6 @@ http://rosettacode.org/wiki/Matrix_Digital_Rain#NCURSES_version
 
 """
 
-# open file to write debug statements since screen is messed up
-
-f = open('output.txt', 'w')
-
 """
 Time between row updates in seconds
 Controls the speed of the digital rain effect.
@@ -38,13 +34,9 @@ try:
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
     stdscr.attron(curses.color_pair(1))
     
-    #max_x = 0
-    #max_y = 0
-     
     max_x = curses.COLS - 1
     max_y = curses.LINES - 1
     
-    # f.write(str(max_x)+' '+str(max_y)+'\n')
          
     # Create arrays of columns based on screen width.
     
@@ -80,7 +72,6 @@ try:
             else:
                 # Draw an empty character if the column is inactive.
                 #mvprintw(columns_row[i], i, " ");
-                #f.write(str(columns_row[i])+','+str(i)+'\n')
                 stdscr.addstr(columns_row[i], i, " ");
                 
      
@@ -100,15 +91,7 @@ try:
             time.sleep(ROW_DELAY)
             stdscr.refresh()
     
-except Exception as err:
+except KeyboardInterrupt as err:
     curses.endwin()
-    print('Exception: '+str(err))
-    f.write('Exception: '+str(err)+'\n')
-    raise err
-
-curses.endwin()
-f.write('Successful\n')
-print('Successful')
-f.close()
 
     
