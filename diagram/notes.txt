@@ -94,3 +94,31 @@ ARCOUNT   16   0110100110100100
 
 Can use this to test my logic to match Go example's.
 
+What's a good Pythonic way to look at 12 bytes and
+pull out the various pieces?
+
+some of the C struct stuff does byte alignment
+so it might skip bytes.
+
+Inefficient way is convert hex string into an int type
+convert it to binary as a string.
+hack up the string into the different sizes.
+convert each piece back to an int
+
+of course to get the above pattern could just
+leave an string of 1's and 0's.
+
+could decode the input string as a list of lists
+
+[[name, bits],[...
+
+i.e.
+
+[['ID',16],['QR',1],['Opcode',4],...
+
+use this list to print decoded output
+
+then convert the hex string to a 
+character string of 1s and 0s and carve up 
+to produce unpacked output.
+
