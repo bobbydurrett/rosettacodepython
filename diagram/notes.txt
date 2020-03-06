@@ -1,0 +1,13 @@
+http://rosettacode.org/wiki/ASCII_art_diagram_converter
+
+several examples have similar output so I think try to 
+match those
+
+http://rosettacode.org/wiki/ASCII_art_diagram_converter#Go
+
+http://rosettacode.org/wiki/ASCII_art_diagram_converter#Java
+
+http://rosettacode.org/wiki/ASCII_art_diagram_converter#Julia
+
+etc.
+
