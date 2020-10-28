@@ -55,6 +55,35 @@ def validate(diagram):
     
     return lines
 
+def decode(lines):
+    print("Name     Bits  Start  End")
+    print("=======  ====  =====  ===")
+    
+    startbit = 0
+    
+    for line in lines:
+        infield=False
+        for c in line:
+            if not infield and c == '|':
+                infield = True
+                spaces = 0
+                name = ''
+            elif infield:
+                if c == ' ':
+                    spaces += 1
+                elif c != '|':
+                    name += c
+                else:
+                    bits = (spaces + len(name) + 1) // 3
+                    endbit = startbit + bits - 1
+                    print('{0:7}    {1:2d}     {2:2d}   {3:2d}'.format(name, bits, startbit, endbit))
+                    spaces = 0
+                    name = ''
+                    startbit += bits
+            
+                
+
+
 
 diagram = """
 +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
@@ -78,6 +107,14 @@ lines = validate(diagram)
 if lines == None:
     print("No lines returned")
 else:
-    for i in range(len(lines)):
-        print(lines[i]+':line '+str(i+1))
-    
+    print(" ")
+    print("Diagram after trimming whitespace and removal of blank lines:")
+    print(" ")
+    for line in lines:
+        print(line)
+        
+    print(" ")
+    print("Decoded:")
+    print(" ")
+
+    results = decode(lines)    
