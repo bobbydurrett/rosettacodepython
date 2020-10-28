@@ -55,11 +55,21 @@ def validate(diagram):
     
     return lines
 
+"""
+
+results is list of lists like:
+
+[[name, bits, start, end],...
+
+"""
+
 def decode(lines):
     print("Name     Bits  Start  End")
     print("=======  ====  =====  ===")
     
     startbit = 0
+    
+    results = []
     
     for line in lines:
         infield=False
@@ -77,12 +87,30 @@ def decode(lines):
                     bits = (spaces + len(name) + 1) // 3
                     endbit = startbit + bits - 1
                     print('{0:7}    {1:2d}     {2:2d}   {3:2d}'.format(name, bits, startbit, endbit))
+                    reslist = [name, bits, startbit, endbit]
+                    results.append(reslist)
                     spaces = 0
                     name = ''
                     startbit += bits
-            
-                
-
+                    
+    return results
+                        
+def unpack(results, hex):
+    print("\nTest string in hex:")
+    print(hex)
+    print("\nTest string in binary:")
+    bin = f'{int(hex, 16):0>{4*len(hex)}b}'
+    print(bin)
+    print("\nUnpacked:\n")
+    print("Name     Size  Bit pattern")
+    print("=======  ====  ================")
+    for r in results:
+        name = r[0]
+        size = r[1]
+        startbit = r[2]
+        endbit = r[3]
+        bitpattern = bin[startbit:endbit+1]
+        print('{0:7}    {1:2d}  {2:16}'.format(name, size, bitpattern))
 
 
 diagram = """
@@ -118,3 +146,10 @@ else:
     print(" ")
 
     results = decode(lines)    
+    
+    # test string
+    
+    hex = "78477bbf5496e12e1bf169a4" 
+    
+    unpack(results, hex)
+    
