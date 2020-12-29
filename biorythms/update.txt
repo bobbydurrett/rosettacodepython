@@ -1,3 +1,5 @@
+=={{header|Python}}==
+<lang python>
 """
 
 Python implementation of
@@ -62,3 +64,13 @@ def biorhythms(birthdate,targetdate):
     
     
 biorhythms("1943-03-09","1972-07-11")
+</lang>
+
+{{out}}
+<pre>
+Born: 1943-03-09 Target: 1972-07-11
+Day: 10717
+Physical day 22: -27% (down but rising, next transition 1972-07-12)
+Emotional day 21: valley
+Mental day 25: valley
+</pre>
