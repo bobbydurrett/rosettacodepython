@@ -1,0 +1,4 @@
+http://rosettacode.org/wiki/Increasing_gaps_between_consecutive_Niven_numbers
+
+C example pretty simple to copy
+
