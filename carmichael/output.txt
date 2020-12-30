@@ -1,0 +1,7 @@
+a(3) has m = 1
+a(4) has m = 1
+a(5) has m = 380
+a(6) has m = 380
+a(7) has m = 780320
+a(8) has m = 950560
+a(9) has m = 950560
