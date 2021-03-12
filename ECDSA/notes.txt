@@ -11,3 +11,7 @@ SO discussion:
 
 https://stackoverflow.com/questions/34451214/how-to-sign-and-verify-signature-with-ecdsa-in-python
 
+I think it might be interesting to do one with the ecdsa module first
+
+at least that would give us a python answer
+
