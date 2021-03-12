@@ -1,0 +1,13 @@
+http://rosettacode.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm
+
+There are examples using a built in library and those implementing
+the "toy" version.
+
+This is one module that might work:
+
+https://pypi.org/project/ecdsa/
+
+SO discussion:
+
+https://stackoverflow.com/questions/34451214/how-to-sign-and-verify-signature-with-ecdsa-in-python
+
