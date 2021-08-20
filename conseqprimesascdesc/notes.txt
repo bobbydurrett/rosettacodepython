@@ -1,0 +1,6 @@
+http://rosettacode.org/wiki/Consecutive_primes_with_ascending_or_descending_dfferences
+
+https://pypi.org/project/prime-sieve/
+
+https://docs.sympy.org/latest/modules/ntheory.html
+
