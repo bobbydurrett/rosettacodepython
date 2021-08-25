@@ -1,3 +1,5 @@
+=={{header|Python}}==
+<lang python>
 from sympy import sieve
 
 primelist = list(sieve.primerange(2,1000000))
@@ -47,3 +49,10 @@ while pindex < listlen:
     pindex += 1
     
 print(longest_list)
+</lang>
+
+{{out}}
+<pre>
+[128981, 128983, 128987, 128993, 129001, 129011, 129023, 129037]
+[322171, 322193, 322213, 322229, 322237, 322243, 322247, 322249]
+</pre>
